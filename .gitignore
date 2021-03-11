@@ -22,7 +22,4 @@
 *.rar
 
 .idea
-mq-api/target/**
-mq-common/target/**
-mq-consumer/target/**
-mq-product/target/**
+**/target/**
