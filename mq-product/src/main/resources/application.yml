@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  rabbitmq:
+    addresses: 47.96.238.166:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 15000
+    # 使用消息确认模式
+    publisher-confirm-type: simple
+    # 设置return消息模式
+    publisher-returns: true
+    template:
+      mandatory: true
+
+rocketmq:
+  name-server: 47.96.238.166:9876
+  producer:
+    group: group01

@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  rabbitmq:
+    addresses: 47.96.238.166:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 15000
+    listener:
+      direct:
+        # 手动ACK
+        acknowledge-mode: manual
+      simple:
+        # 线程数
+        concurrency: 5
+        # 最大线程数
+        max-concurrency: 10
+        # 每次处理的消息数
+        prefetch: 1
+
